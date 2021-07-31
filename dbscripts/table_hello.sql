@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS hello (
+    id BIGSERIAL,
+    time TIMESTAMP NOT NULL
+)
