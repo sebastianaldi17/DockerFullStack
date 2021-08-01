@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"time"
 
 	"github.com/sebastianaldi17/dockerfullstack/server/code/entity"
 )
@@ -19,6 +20,10 @@ func (h *Handler) Hello(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte("Hello there!"))
+}
+
+func (h *Handler) HelloCron() {
+	log.Println("Hello Cron @ ", time.Now())
 }
 
 func (h *Handler) GetLogs(w http.ResponseWriter, r *http.Request) {
